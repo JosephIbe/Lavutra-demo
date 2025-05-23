@@ -1,0 +1,38 @@
+/* globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: 'NeueHaas';
+    src: url('/fonts/NeueHaasDisplayRoman.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  html {
+    @apply scroll-smooth;
+  }
+  
+  body {
+    @apply bg-black text-white font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-mono tracking-widest uppercase;
+  }
+  
+  .text-gold-500 {
+    color: #D4AF37;
+  }
+  
+  .border-gold-500 {
+    border-color: #D4AF37;
+  }
+  
+  .bg-gold-500 {
+    background-color: #D4AF37;
+  }
+}
