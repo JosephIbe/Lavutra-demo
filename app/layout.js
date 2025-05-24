@@ -30,9 +30,10 @@ export const metadata = {
 };
 
 import { neueHaas, gtAmerica } from './utils/font'
-import { MotionConfig } from 'framer-motion'
+// import { MotionConfig } from 'framer-motion'
 import Navbar from './components/Navbar';
 import Footer from "./components/Footer";
+import MotionWrapper from "./utils/motion_wrapper";
 
 export default function RootLayout({ children }) {
   return (
@@ -42,13 +43,15 @@ export default function RootLayout({ children }) {
     >
       <body
         className="bg-black text-white">
-        <MotionConfig reducedMotion="user">
+        {/* <MotionConfig reducedMotion="user"> */}
+        <MotionWrapper>
           <Navbar />
           <main className="pt-16">
             {children}
           </main>
           <Footer />
-        </MotionConfig>  
+        {/* </MotionConfig>   */}
+        </MotionWrapper>
       </body>
     </html>
   );
